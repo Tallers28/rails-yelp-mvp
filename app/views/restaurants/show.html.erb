@@ -1,0 +1,19 @@
+<h2><%= @restaurant.name %></h2>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.category %></p>
+<p><%= @restaurant.phone_number %></p>
+
+<%#<% @restaurant.reviews.each do |review| %>
+<%#<% count = 0 %>
+  <%#<% if review.rating > count %>
+    <%#<p><%= review.rating %></p>
+  <%#<% else %>
+   <%# <p><%= review.rating %></p>
+  <%#<% end %>
+  <%#<% count += 1 %>
+<%#<% end %>
+
+
+<%= link_to "Review List", review_path %>
+
+<%= link_to "Restaurant List", restaurants_path %>
