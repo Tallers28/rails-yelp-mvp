@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get "restaurants/:id/reviews", to: "reviews#show", as: :review
   get "restaurants/:id/reviews/new", to: "reviews#new", as: :new_review
   post "restaurants", to: "restaurants#create"
-  post "restaurants/:id/reviews", to: "reviews#create"
+  post "restaurants/:id/reviews", to: "reviews#create", as: :restaurant_reviews
+  # resources :restaurants do
+  #   resources :reviews
+  # end
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
